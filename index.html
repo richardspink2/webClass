@@ -7,109 +7,119 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Richard Spink" />
-    <meta name="description" content="Lead Latch is a simple CRM concept for local service businesses to track leads, quotes, follow-ups, jobs, and reviews." />
+    <meta name="description" content="Lead Latch is a simple CRM project for local service businesses to track leads, quotes, follow-ups, completed jobs, and reviews." />
     <meta name="keywords" content="Lead Latch, local service CRM, lead tracking, quote follow ups, small business software" />
-    <title>Lead Latch | Local Service CRM for Lead Tracking</title>
+    <title>Lead Latch | Lead Tracking for Local Service Businesses</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header class="site-header" id="home">
-        <nav class="top-nav" aria-label="Main navigation">
-            <a class="logo" href="#home">Lead Latch</a>
+    <header class="page-shell" id="top">
+        <nav class="site-nav" aria-label="Page navigation">
+            <a class="brand" href="#top">Lead Latch</a>
             <div class="nav-links">
-                <a href="#about">About</a>
+                <a href="#overview">Overview</a>
                 <a href="#features">Features</a>
-                <a href="#tech-stack">Tech Stack</a>
-                <a href="#demo">Demo</a>
+                <a href="#demo">Live Build</a>
             </div>
         </nav>
 
-        <section class="hero">
-            <div class="hero-text">
-                <p class="eyebrow">Local service business CRM concept</p>
-                <h1>Keep service leads from slipping through the cracks.</h1>
-                <p>
-                    Lead Latch is a project I am building to help local service businesses organize leads, quotes, follow-ups, completed jobs, and review requests in one simple place.
+        <section class="hero" aria-labelledby="page-title">
+            <div class="hero-copy">
+                <p class="kicker">Student project for local service businesses</p>
+                <h1 id="page-title">Lead Latch helps small businesses keep every lead in sight.</h1>
+                <p class="lead-text">
+                    Lead Latch is a simple CRM project I am building to help local service businesses track customer leads, quotes, follow-ups, completed jobs, and review requests without making the process feel overwhelming.
                 </p>
                 <div class="hero-actions">
-                    <a class="button button-primary" href="#features">View features</a>
-                    <a class="button button-secondary" href="#demo">Open live demo</a>
+                    <a class="button primary" href="#features">See the features</a>
+                    <a class="button secondary" href="https://project-i30i1.vercel.app/" target="_blank" rel="noopener noreferrer">Open current build</a>
                 </div>
             </div>
 
-            <img
-                class="hero-image"
-                src="https://images.unsplash.com/photo-1556761175-b413da4baf72"
-                alt="Small business owner reviewing customer lead information on a laptop"
-            />
+            <figure class="hero-visual">
+                <img
+                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72"
+                    alt="Small business team reviewing customer lead information on a laptop"
+                />
+                <figcaption>Lead tracking, quote follow-ups, and customer organization in one place.</figcaption>
+            </figure>
         </section>
     </header>
 
-    <main>
-        <section class="content-card" id="about">
-            <p class="eyebrow">About the project</p>
-            <h2>Built for small businesses that depend on follow-ups</h2>
-            <p>
-                Many small business owners lose money when they forget to reply to a customer or fail to follow up after sending a quote. Lead Latch is meant to work like a simple CRM, but with less clutter and a clearer focus on local service work.
-            </p>
-        </section>
-
-        <section class="section-block" id="features">
-            <p class="eyebrow">Project features</p>
-            <h2>Core tools for lead tracking</h2>
-
-            <div class="feature-grid">
-                <article class="feature-card">
-                    <h3>Lead Capture</h3>
-                    <p>Store new customer requests so business owners can respond before the opportunity goes cold.</p>
-                </article>
-
-                <article class="feature-card">
-                    <h3>Quote Follow-Ups</h3>
-                    <p>Track quote value and follow-up status so potential jobs are easier to manage.</p>
-                </article>
-
-                <article class="feature-card">
-                    <h3>Completed Jobs</h3>
-                    <p>Keep a record of finished work and use that information to request reviews from customers.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="content-card" id="tech-stack">
-            <p class="eyebrow">Development stack</p>
-            <h2>Current full-stack version</h2>
-            <p>
-                This HTML and CSS page explains the Lead Latch idea, while the current app version uses a larger full-stack setup.
-            </p>
-
-            <ul class="tag-list" aria-label="Lead Latch technology stack">
-                <li>Next.js</li>
-                <li>TypeScript</li>
-                <li>Tailwind CSS</li>
-                <li>PostgreSQL</li>
-                <li>Prisma</li>
-                <li>NextAuth</li>
-                <li>Resend</li>
-                <li>Stripe</li>
-            </ul>
-        </section>
-
-        <section class="callout" id="demo">
-            <div>
-                <p class="eyebrow">Live project</p>
-                <h2>View the current Lead Latch build</h2>
+    <main class="page-shell">
+        <div class="main-card">
+            <section class="content-section" id="overview" aria-labelledby="overview-title">
+                <p class="section-label">Overview</p>
+                <h2 id="overview-title">A focused CRM idea with less clutter</h2>
                 <p>
-                    The live version shows the direction of the project and how the concept can become a working tool for local service businesses.
+                    Many small business owners lose money when they forget to reply to a customer or fail to follow up after giving a quote. Lead Latch is designed around that problem. Instead of trying to be a large business platform, the goal is to give local service owners a clear place to manage the customer work that matters most.
                 </p>
-            </div>
-            <a class="button button-primary" href="https://project-i30i1.vercel.app/" target="_blank" rel="noopener noreferrer">
-                Visit Lead Latch
-            </a>
-        </section>
+            </section>
+
+            <section class="content-section" id="features" aria-labelledby="features-title">
+                <p class="section-label">Features</p>
+                <h2 id="features-title">The page now follows the same flow as the product idea</h2>
+
+                <div class="feature-list">
+                    <article>
+                        <span class="feature-number">01</span>
+                        <div>
+                            <h3>Capture new leads</h3>
+                            <p>Keep customer requests organized so business owners can respond before the opportunity goes cold.</p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <span class="feature-number">02</span>
+                        <div>
+                            <h3>Track quotes and follow-ups</h3>
+                            <p>Make it easier to see which customers still need a reply, estimate, or follow-up message.</p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <span class="feature-number">03</span>
+                        <div>
+                            <h3>Close jobs and request reviews</h3>
+                            <p>Use completed job information to help the business stay organized and ask customers for reviews at the right time.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="content-section" id="tech-stack" aria-labelledby="tech-title">
+                <p class="section-label">Tech stack</p>
+                <h2 id="tech-title">Current full-stack direction</h2>
+                <p>
+                    This HTML and CSS page explains the project, while the current working build uses a larger full-stack setup.
+                </p>
+
+                <ul class="tag-list" aria-label="Lead Latch technology stack">
+                    <li>Next.js</li>
+                    <li>TypeScript</li>
+                    <li>Tailwind CSS</li>
+                    <li>PostgreSQL</li>
+                    <li>Prisma</li>
+                    <li>NextAuth</li>
+                    <li>Resend</li>
+                    <li>Stripe</li>
+                </ul>
+            </section>
+
+            <section class="content-section demo-section" id="demo" aria-labelledby="demo-title">
+                <div>
+                    <p class="section-label">Live build</p>
+                    <h2 id="demo-title">View the current Lead Latch project</h2>
+                    <p>
+                        The live version shows the direction of the project and how it could support local service businesses in a real workflow.
+                    </p>
+                </div>
+                <a class="button primary" href="https://project-i30i1.vercel.app/" target="_blank" rel="noopener noreferrer">Visit Lead Latch</a>
+            </section>
+        </div>
     </main>
 
-    <footer>
+    <footer class="page-shell site-footer">
         <p>Lead Latch project page by Richard Spink.</p>
     </footer>
 </body>
