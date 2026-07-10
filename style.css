@@ -81,8 +81,9 @@ h3,
 }
 
 .links a {
+    align-items: center;
     color: var(--muted);
-    display: inline-block;
+    display: inline-flex;
     font-size: 0.95rem;
     padding: 4px 2px 8px;
     position: relative;
@@ -108,14 +109,14 @@ h3,
 
 .links a:hover,
 .links a:focus-visible {
-    animation: heartbeat 1s ease-in-out infinite;
+    animation: heartbeat 0.8s ease-in-out infinite;
     color: var(--teal);
-    text-shadow: 0 0 16px rgba(31, 111, 99, 0.2);
+    text-shadow: 0 0 18px rgba(31, 111, 99, 0.25);
 }
 
 .links a:hover::after,
 .links a:focus-visible::after {
-    animation: pulse-line 1s ease-in-out infinite;
+    animation: pulse-line 0.8s ease-in-out infinite;
     opacity: 1;
 }
 
@@ -312,19 +313,19 @@ figcaption {
     }
 
     18% {
-        transform: scale(1.16);
+        transform: scale(1.22);
     }
 
     32% {
-        transform: scale(0.98);
+        transform: scale(0.94);
     }
 
     48% {
-        transform: scale(1.2);
+        transform: scale(1.26);
     }
 
     64% {
-        transform: scale(1.03);
+        transform: scale(1.04);
     }
 }
 
@@ -352,20 +353,5 @@ figcaption {
     .hero,
     .panel {
         padding: 22px;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .links a:hover,
-    .links a:focus-visible {
-        animation: none;
-        text-shadow: none;
-    }
-
-    .links a:hover::after,
-    .links a:focus-visible::after {
-        animation: none;
-        opacity: 1;
-        transform: none;
     }
 }
