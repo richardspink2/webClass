@@ -38,6 +38,10 @@ a {
     text-decoration: none;
 }
 
+figure {
+    margin: 0;
+}
+
 .wrap {
     margin: 0 auto;
     max-width: 980px;
@@ -78,7 +82,16 @@ h3,
 
 .links a {
     color: var(--muted);
+    display: inline-block;
     font-size: 0.95rem;
+    transform-origin: center;
+    transition: color 0.2s ease;
+}
+
+.links a:hover,
+.links a:focus-visible {
+    animation: heartbeat 0.9s ease-in-out infinite;
+    color: var(--teal);
 }
 
 .links .current {
@@ -120,6 +133,12 @@ h3,
 
 .four {
     grid-template-columns: repeat(4, 1fr);
+}
+
+.split {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
 }
 
 .card {
@@ -164,6 +183,12 @@ p,
 li {
     color: var(--muted);
     font-size: 1rem;
+}
+
+figcaption {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-top: 10px;
 }
 
 .actions {
@@ -239,7 +264,6 @@ li {
     background: #cb7a4a;
 }
 
-
 .footer {
     padding: 28px 16px 36px;
 }
@@ -248,8 +272,32 @@ li {
     font-size: 0.95rem;
 }
 
+@keyframes heartbeat {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    20% {
+        transform: scale(1.08);
+    }
+
+    35% {
+        transform: scale(0.98);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+    65% {
+        transform: scale(1);
+    }
+}
+
 @media (max-width: 760px) {
     .hero,
+    .split,
     .three,
     .four {
         grid-template-columns: 1fr;
@@ -258,5 +306,12 @@ li {
     .hero,
     .panel {
         padding: 22px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .links a:hover,
+    .links a:focus-visible {
+        animation: none;
     }
 }
