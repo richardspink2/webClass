@@ -84,19 +84,52 @@ h3,
     color: var(--muted);
     display: inline-block;
     font-size: 0.95rem;
+    padding: 4px 2px 8px;
+    position: relative;
+    text-shadow: 0 0 0 rgba(31, 111, 99, 0);
     transform-origin: center;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+    will-change: transform;
+}
+
+.links a::after {
+    background: rgba(31, 111, 99, 0.18);
+    border-radius: 999px;
+    bottom: 0;
+    content: "";
+    height: 8px;
+    left: -4px;
+    opacity: 0;
+    position: absolute;
+    right: -4px;
+    transform: scaleX(0.65);
+    transform-origin: center;
 }
 
 .links a:hover,
 .links a:focus-visible {
-    animation: heartbeat 0.9s ease-in-out infinite;
+    animation: heartbeat 1s ease-in-out infinite;
     color: var(--teal);
+    text-shadow: 0 0 16px rgba(31, 111, 99, 0.2);
+}
+
+.links a:hover::after,
+.links a:focus-visible::after {
+    animation: pulse-line 1s ease-in-out infinite;
+    opacity: 1;
 }
 
 .links .current {
-    border-bottom: 2px solid var(--teal);
     color: var(--ink);
+}
+
+.links .current::after {
+    background: var(--teal);
+    height: 2px;
+    left: 0;
+    opacity: 1;
+    right: 0;
+    transform: none;
 }
 
 .hero,
@@ -278,20 +311,33 @@ figcaption {
         transform: scale(1);
     }
 
-    20% {
-        transform: scale(1.08);
+    18% {
+        transform: scale(1.16);
     }
 
-    35% {
+    32% {
         transform: scale(0.98);
     }
 
-    50% {
-        transform: scale(1.12);
+    48% {
+        transform: scale(1.2);
     }
 
-    65% {
-        transform: scale(1);
+    64% {
+        transform: scale(1.03);
+    }
+}
+
+@keyframes pulse-line {
+    0%,
+    100% {
+        opacity: 0.45;
+        transform: scaleX(0.7);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleX(1);
     }
 }
 
@@ -313,5 +359,13 @@ figcaption {
     .links a:hover,
     .links a:focus-visible {
         animation: none;
+        text-shadow: none;
+    }
+
+    .links a:hover::after,
+    .links a:focus-visible::after {
+        animation: none;
+        opacity: 1;
+        transform: none;
     }
 }
